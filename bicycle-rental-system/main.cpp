@@ -2,16 +2,28 @@
 #include <fstream>
 #include <string>
 
+#include "SignUpUI.h"
+#include "SignUp.h"
+#include "UserCollection.h"
+
 // 상수 선언
 #define MAX_STRING 32
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 
 int main() {
-
   // 파일 입출력을 위한 초기화
   std::ifstream in_fp(INPUT_FILE_NAME);
   std::ofstream out_fp(OUTPUT_FILE_NAME);
+
+  // collection(entity) 객체 생성
+  UserCollection user_collection;
+
+  // control 객체 생성
+  SignUp sign_up(&user_collection);
+
+  // boundary 객체 생성
+  SignUpUI sign_up_ui(in_fp, out_fp, &sign_up);
 
   // 메뉴 입력값 초기화
   int menu_level_1 = 0;
@@ -27,6 +39,7 @@ int main() {
         switch (menu_level_2) {
           case 1:
             // 1.1. 회원가입
+            sign_up_ui.signUp();
             break;
         }
         break;
