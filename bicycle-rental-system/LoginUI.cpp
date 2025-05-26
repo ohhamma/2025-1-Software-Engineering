@@ -16,5 +16,6 @@ void LoginUI::login() {
   if (login_->getCurrentUser() != nullptr) {
     out_fp_ << "2.1. 로그인\n";
     out_fp_ << "> " << id << " " << password << "\n";
+    out_fp_ << "\n";
   }
 }

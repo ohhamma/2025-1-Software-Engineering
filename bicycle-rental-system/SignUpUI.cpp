@@ -17,4 +17,5 @@ void SignUpUI::signUp() {
   // 출력 형식
   out_fp_ << "1.1. 회원가입\n";
   out_fp_ << "> " << id << " " << password << " " << phone_number << "\n";
+  out_fp_ << "\n";
 }
