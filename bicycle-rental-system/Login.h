@@ -11,6 +11,8 @@ class Login {
                   const std::string& password);
 
   User* getCurrentUser() const;
+  
+  void removeCurrentUser();
 
  private:
   UserCollection* user_collection_;
