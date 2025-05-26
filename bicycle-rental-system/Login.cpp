@@ -17,3 +17,7 @@ void Login::loginUser(const std::string& id,
 User* Login::getCurrentUser() const {
   return current_user_;
 }
+
+void Login::removeCurrentUser() {
+  current_user_ = nullptr;
+}

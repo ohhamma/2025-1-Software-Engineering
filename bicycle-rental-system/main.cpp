@@ -6,9 +6,11 @@
 
 #include "SignUp.h"
 #include "Login.h"
+#include "Logout.h"
 
 #include "SignUpUI.h"
 #include "LoginUI.h"
+#include "LogoutUI.h"
 
 // 상수 선언
 #define MAX_STRING 32
@@ -26,10 +28,12 @@ int main() {
   // control 객체 생성
   SignUp sign_up(&user_collection);
   Login login(&user_collection);
+  Logout logout(&login);
 
   // boundary 객체 생성
   SignUpUI sign_up_ui(in_fp, out_fp, &sign_up);
   LoginUI login_ui(in_fp, out_fp, &login);
+  LogoutUI logout_ui(in_fp, out_fp, &login, &logout);
 
   // 메뉴 입력값 초기화
   int menu_level_1 = 0;
@@ -58,6 +62,7 @@ int main() {
             break;
           case 2:
             // 2.2. 로그아웃
+            logout_ui.logout();
             break;
         }
         break;
