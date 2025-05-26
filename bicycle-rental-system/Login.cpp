@@ -4,17 +4,16 @@
 Login::Login(UserCollection* user_collection)
     : user_collection_(user_collection) {}
 
-User* Login::loginUser(const std::string& id,
-                       const std::string& password) {
+void Login::loginUser(const std::string& id,
+                      const std::string& password) {
   User* user = user_collection_->findUserById(id);
-
-  if (user == nullptr) {
-    return nullptr;
+  if (user != nullptr && user->checkPassword(password)) {
+    current_user_ = user;
+  } else {
+    current_user_ = nullptr;  // 로그인 실패 시 nullptr로 초기화
   }
+}
 
-  if (!user->checkPassword(password)) {
-    return nullptr;
-  }
-
-  return user;  // 로그인 성공
+User* Login::getCurrentUser() const {
+  return current_user_;
 }

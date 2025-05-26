@@ -7,9 +7,12 @@ class Login {
  public:
   Login(UserCollection* user_collection);
 
-  User* loginUser(const std::string& id,
+  void loginUser(const std::string& id,
                   const std::string& password);
+
+  User* getCurrentUser() const;
 
  private:
   UserCollection* user_collection_;
+  User* current_user_;
 };
