@@ -1,13 +1,9 @@
 #include "SignUpUI.h"
 
-SignUpUI::SignUpUI(std::ifstream& in_fp, std::ofstream& out_fp)
-    : in_fp_(in_fp), out_fp_(out_fp) {
-  sign_up_ = new SignUp();
-}
-
-SignUpUI::~SignUpUI() {
-  delete sign_up_;
-}
+SignUpUI::SignUpUI(std::ifstream& in_fp,
+                   std::ofstream& out_fp,
+                   SignUp* sign_up)
+    : in_fp_(in_fp), out_fp_(out_fp), sign_up_(sign_up) {}
 
 void SignUpUI::signUp() {
   std::string id, password, phone_number;

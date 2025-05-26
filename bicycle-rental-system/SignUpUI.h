@@ -6,8 +6,7 @@
 
 class SignUpUI {
  public:
-  SignUpUI(std::ifstream& in_fp, std::ofstream& out_fp);
-  ~SignUpUI();
+  SignUpUI(std::ifstream& in_fp, std::ofstream& out_fp, SignUp* sign_up);
 
   void signUp();
 
