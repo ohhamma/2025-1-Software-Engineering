@@ -2,9 +2,13 @@
 #include <fstream>
 #include <string>
 
-#include "SignUpUI.h"
-#include "SignUp.h"
 #include "UserCollection.h"
+
+#include "SignUp.h"
+#include "Login.h"
+
+#include "SignUpUI.h"
+#include "LoginUI.h"
 
 // 상수 선언
 #define MAX_STRING 32
@@ -21,9 +25,11 @@ int main() {
 
   // control 객체 생성
   SignUp sign_up(&user_collection);
+  Login login(&user_collection);
 
   // boundary 객체 생성
   SignUpUI sign_up_ui(in_fp, out_fp, &sign_up);
+  LoginUI login_ui(in_fp, out_fp, &login);
 
   // 메뉴 입력값 초기화
   int menu_level_1 = 0;
@@ -48,6 +54,7 @@ int main() {
         switch (menu_level_2) {
           case 1:
             // 2.1. 로그인
+            login_ui.login();
             break;
           case 2:
             // 2.2. 로그아웃
