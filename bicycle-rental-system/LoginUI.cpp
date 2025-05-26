@@ -13,6 +13,8 @@ void LoginUI::login() {
   login_->loginUser(id, password);
 
   // 출력 형식
-  out_fp_ << "2.1. 로그인\n";
-  out_fp_ << "> " << id << " " << password << "\n";
+  if (login_->getCurrentUser() != nullptr) {
+    out_fp_ << "2.1. 로그인\n";
+    out_fp_ << "> " << id << " " << password << "\n";
+  }
 }
