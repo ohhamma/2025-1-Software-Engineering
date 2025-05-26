@@ -8,11 +8,11 @@ class UserCollection {
   UserCollection();
   ~UserCollection();  // 동적 메모리 해제를 위한 소멸자
 
-  void AddMember(const std::string& id,
+  void addMember(const std::string& id,
                  const std::string& password,
                  const std::string& phone);
 
-  User* FindUserById(const std::string& id) const;
+  User* findUserById(const std::string& id) const;
 
  private:
   User* users_[10];

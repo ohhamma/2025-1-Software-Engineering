@@ -9,7 +9,7 @@ UserCollection::~UserCollection() {
   }
 }
 
-void UserCollection::AddMember(const std::string& id,
+void UserCollection::addMember(const std::string& id,
                                const std::string& password,
                                const std::string& phone) {
   if (num_users_ < 10) {
@@ -17,9 +17,9 @@ void UserCollection::AddMember(const std::string& id,
   }
 }
 
-User* UserCollection::FindUserById(const std::string& id) const {
+User* UserCollection::findUserById(const std::string& id) const {
   for (int i = 0; i < num_users_; ++i) {
-    if (users_[i]->GetId() == id) {
+    if (users_[i]->getId() == id) {
       return users_[i];
     }
   }

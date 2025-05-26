@@ -8,7 +8,7 @@ class SignUp {
   SignUp();
   ~SignUp();
 
-  void AddNewMember(const std::string& id,
+  void addNewMember(const std::string& id,
                     const std::string& password,
                     const std::string& phone_number);
 

@@ -16,7 +16,7 @@ void SignUpUI::signUp() {
   in_fp_ >> id >> password >> phone_number;
 
   // 실제 회원 추가
-  sign_up_->AddNewMember(id, password, phone_number);
+  sign_up_->addNewMember(id, password, phone_number);
 
   // 출력 형식
   out_fp_ << "1.1. 회원가입\n";
