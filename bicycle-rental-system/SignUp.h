@@ -5,8 +5,7 @@
 
 class SignUp {
  public:
-  SignUp();
-  ~SignUp();
+  SignUp(UserCollection* user_collection);
 
   void addNewMember(const std::string& id,
                     const std::string& password,
