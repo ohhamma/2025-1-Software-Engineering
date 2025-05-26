@@ -11,9 +11,9 @@ UserCollection::~UserCollection() {
 
 void UserCollection::addMember(const std::string& id,
                                const std::string& password,
-                               const std::string& phone) {
+                               const std::string& phone_number) {
   if (num_users_ < 10) {
-    users_[num_users_++] = new Member(id, password, phone);
+    users_[num_users_++] = new Member(id, password, phone_number);
   }
 }
 
