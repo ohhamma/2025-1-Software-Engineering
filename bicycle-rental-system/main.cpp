@@ -3,14 +3,17 @@
 #include <string>
 
 #include "UserCollection.h"
+#include "BicycleCollection.h"
 
 #include "SignUp.h"
 #include "Login.h"
 #include "Logout.h"
+#include "RegisterBicycle.h"
 
 #include "SignUpUI.h"
 #include "LoginUI.h"
 #include "LogoutUI.h"
+#include "RegisterBicycleUI.h"
 
 // 상수 선언
 #define MAX_STRING 32
@@ -24,16 +27,19 @@ int main() {
 
   // collection(entity) 객체 생성
   UserCollection user_collection;
+  BicycleCollection bicycle_collection;
 
   // control 객체 생성
   SignUp sign_up(&user_collection);
   Login login(&user_collection);
   Logout logout(&login);
+  RegisterBicycle register_bicycle(&bicycle_collection);
 
   // boundary 객체 생성
   SignUpUI sign_up_ui(in_fp, out_fp, &sign_up);
   LoginUI login_ui(in_fp, out_fp, &login);
   LogoutUI logout_ui(in_fp, out_fp, &login, &logout);
+  RegisterBicycleUI register_bicycle_ui(in_fp, out_fp, &register_bicycle);
 
   // 메뉴 입력값 초기화
   int menu_level_1 = 0;
@@ -71,6 +77,7 @@ int main() {
         switch (menu_level_2) {
           case 1:
             // 3.1. 자전거 등록
+            register_bicycle_ui.registerBicycle();
             break;
         }
         break;

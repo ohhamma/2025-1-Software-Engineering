@@ -10,7 +10,7 @@ class UserCollection {
 
   void addMember(const std::string& id,
                  const std::string& password,
-                 const std::string& phone);
+                 const std::string& phone_number);
 
   User* findUserById(const std::string& id) const;
 
