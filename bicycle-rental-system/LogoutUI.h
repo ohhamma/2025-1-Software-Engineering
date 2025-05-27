@@ -7,7 +7,7 @@
 class LogoutUI {
  public:
   LogoutUI(std::ifstream& in_fp, std::ofstream& out_fp,
-           Login* login, Logout* logout);
+           Logout* logout, Login* login);
 
   void logout();
 

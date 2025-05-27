@@ -1,8 +1,8 @@
 #include "LogoutUI.h"
 
 LogoutUI::LogoutUI(std::ifstream& in_fp, std::ofstream& out_fp,
-                   Login* login, Logout* logout)
-    : in_fp_(in_fp), out_fp_(out_fp), login_(login), logout_(logout) {}
+                   Logout* logout, Login* login)
+    : in_fp_(in_fp), out_fp_(out_fp), logout_(logout), login_(login) {}
 
 void LogoutUI::logout() {
   // 현재 로그인되어 있는 사용자 조회
