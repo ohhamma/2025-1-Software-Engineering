@@ -2,12 +2,12 @@
 
 ViewRentalInfoUI::ViewRentalInfoUI(std::ifstream& in_fp,
                                    std::ofstream& out_fp,
-                                   Login* login,
-                                   ViewRentalInfo* view_rental_info)
+                                   ViewRentalInfo* view_rental_info,
+                                   Login* login)
     : in_fp_(in_fp),
       out_fp_(out_fp),
-      login_(login),
-      view_rental_info_(view_rental_info) {}
+      view_rental_info_(view_rental_info),
+      login_(login) {}
 
 void ViewRentalInfoUI::viewRentalInfo() {
   // 현재 로그인되어 있는 사용자 조회
