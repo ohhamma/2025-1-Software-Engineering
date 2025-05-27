@@ -1,4 +1,4 @@
-#include "LogoutUI.h"
+﻿#include "LogoutUI.h"
 
 LogoutUI::LogoutUI(std::ifstream& in_fp, std::ofstream& out_fp,
                    Logout* logout, Login* login)

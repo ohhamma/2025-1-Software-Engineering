@@ -1,4 +1,4 @@
-#include "SignUp.h"
+﻿#include "SignUp.h"
 #include "Member.h"
 
 SignUp::SignUp(UserCollection* user_collection)

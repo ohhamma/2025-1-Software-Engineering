@@ -1,4 +1,4 @@
-#include "ViewRentalInfoUI.h"
+﻿#include "ViewRentalInfoUI.h"
 
 ViewRentalInfoUI::ViewRentalInfoUI(std::ifstream& in_fp,
                                    std::ofstream& out_fp,
