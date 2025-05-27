@@ -10,12 +10,14 @@
 #include "Logout.h"
 #include "RegisterBicycle.h"
 #include "RentBicycle.h"
+#include "ViewRentalInfo.h"
 
 #include "SignUpUI.h"
 #include "LoginUI.h"
 #include "LogoutUI.h"
 #include "RegisterBicycleUI.h"
 #include "RentBicycleUI.h"
+#include "ViewRentalInfoUI.h"
 
 // 상수 선언
 #define MAX_STRING 32
@@ -37,6 +39,7 @@ int main() {
   Logout logout(&login);
   RegisterBicycle register_bicycle(&bicycle_collection);
   RentBicycle rent_bicycle(&bicycle_collection);
+  ViewRentalInfo view_rental_info(&bicycle_collection);
 
   // boundary 객체 생성
   SignUpUI sign_up_ui(in_fp, out_fp, &sign_up);
@@ -44,6 +47,7 @@ int main() {
   LogoutUI logout_ui(in_fp, out_fp, &login, &logout);
   RegisterBicycleUI register_bicycle_ui(in_fp, out_fp, &register_bicycle);
   RentBicycleUI rent_bicycle_ui(in_fp, out_fp, &login, &rent_bicycle);
+  ViewRentalInfoUI view_rental_info_ui(in_fp, out_fp, &login, &view_rental_info);
 
   // 메뉴 입력값 초기화
   int menu_level_1 = 0;
@@ -99,6 +103,7 @@ int main() {
         switch (menu_level_2) {
           case 1:
             // 5.1. 자전거 대여 리스트
+            view_rental_info_ui.viewRentalInfo();
             break;
         }
         break;
