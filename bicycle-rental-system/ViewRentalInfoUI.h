@@ -8,8 +8,8 @@ class ViewRentalInfoUI {
  public:
   ViewRentalInfoUI(std::ifstream& in_fp,
                    std::ofstream& out_fp,
-                   Login* login,
-                   ViewRentalInfo* view_rental_info);
+                   ViewRentalInfo* view_rental_info,
+                   Login* login);
 
   void viewRentalInfo();
 

@@ -1,9 +1,9 @@
 #include "RentBicycleUI.h"
 
 RentBicycleUI::RentBicycleUI(std::ifstream& in_fp, std::ofstream& out_fp,
-                             Login* login, RentBicycle* rent_bicycle)
+                             RentBicycle* rent_bicycle, Login* login)
     : in_fp_(in_fp), out_fp_(out_fp),
-      login_(login), rent_bicycle_(rent_bicycle) {}
+      rent_bicycle_(rent_bicycle), login_(login) {}
 
 void RentBicycleUI::rentBicycle() {
   std::string id;
