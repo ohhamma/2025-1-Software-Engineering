@@ -10,5 +10,5 @@ void ShutDownUI::shutDown() {
   shut_down_->shutDownSystem();
 
   // 출력 형식
-  out_fp_ << "6.1. 종료\n";
+  out_fp_ << "6.1. 종료";
 }
