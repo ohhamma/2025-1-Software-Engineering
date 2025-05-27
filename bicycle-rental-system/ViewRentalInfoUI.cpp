@@ -19,7 +19,7 @@ void ViewRentalInfoUI::viewRentalInfo() {
       view_rental_info_->listRentedBicycles(current_user);
 
     // 출력 형식
-    out_fp_ << "5.1. 자전거 대여 정보\n";
+    out_fp_ << "5.1. 자전거 대여 리스트\n";
     for (const auto* bicycle : bicycles) {
       out_fp_ << "> " << bicycle->getId() << " " << bicycle->getName() << "\n";
     }
