@@ -8,7 +8,7 @@ class RentBicycle {
  public:
   RentBicycle(BicycleCollection* bicycle_collection);
 
-  void rentBicycle(const std::string& bicycle_id, User* user);
+  Bicycle* rentBicycle(const std::string& bicycle_id, User* user);
 
  private:
   BicycleCollection* bicycle_collection_;

@@ -4,11 +4,12 @@ RentBicycle::RentBicycle(BicycleCollection* bicycle_collection)
     : bicycle_collection_(bicycle_collection) {}
 
 
-void RentBicycle::rentBicycle(const std::string& id, User* user) {
-  Bicycle* bicycle = bicycle_collection_->findBicycleById(id);
-  
-  if (bicycle != nullptr) {
-    std::string renter_id = user->getId();
-    bicycle->setRenterId(renter_id);
+Bicycle* RentBicycle::rentBicycle(const std::string& bicycle_id, User* user) {
+  Bicycle* bicycle = bicycle_collection_->findBicycleById(bicycle_id);
+  if (bicycle == nullptr) {
+    return nullptr;  // 자전거를 찾지 못한 경우
   }
+
+  bicycle->setRenterId(user->getId());
+  return bicycle;
 }
