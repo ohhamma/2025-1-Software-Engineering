@@ -64,29 +64,66 @@ int main() {
 
     switch (menu_level_1) {
       case 1:
-        if (menu_level_2 == 1) sign_up_ui->signUp();
+        switch (menu_level_2) {
+          case 1:
+            // 1.1. 회원가입
+            sign_up_ui->signUp();
+            break;
+        }
         break;
+
       case 2:
-        if (menu_level_2 == 1) login_ui->login();
-        else if (menu_level_2 == 2) logout_ui->logout();
+        switch (menu_level_2) {
+          case 1:
+            // 2.1. 로그인
+            login_ui->login();
+            break;
+          case 2:
+            // 2.2. 로그아웃
+            logout_ui->logout();
+            break;
+        }
         break;
+
       case 3:
-        if (menu_level_2 == 1) register_bicycle_ui->registerBicycle();
+        switch (menu_level_2) {
+          case 1:
+            // 3.1. 자전거 등록
+            register_bicycle_ui->registerBicycle();
+            break;
+        }
         break;
+
       case 4:
-        if (menu_level_2 == 1) rent_bicycle_ui->rentBicycle();
+        switch (menu_level_2) {
+          case 1:
+            // 4.1. 자전거 대여
+            rent_bicycle_ui->rentBicycle();
+            break;
+        }
         break;
+
       case 5:
-        if (menu_level_2 == 1) view_rental_info_ui->viewRentalInfo();
+        switch (menu_level_2) {
+          case 1:
+            // 5.1. 자전거 대여 리스트
+            view_rental_info_ui->viewRentalInfo();
+            break;
+        }
         break;
+
       case 6:
-        if (menu_level_2 == 1) {
-          shut_down_ui->shutDown();
-          is_program_exit = true;
+        switch (menu_level_2) {
+          case 1:
+            // 6.1. 종료
+            shut_down_ui->shutDown();
+            is_program_exit = true;
+            break;
         }
         break;
     }
   }
+
 
   // 파일 닫기
   in_fp.close();
