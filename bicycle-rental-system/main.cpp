@@ -124,7 +124,6 @@ int main() {
     }
   }
 
-
   // 파일 닫기
   in_fp.close();
   out_fp.close();
