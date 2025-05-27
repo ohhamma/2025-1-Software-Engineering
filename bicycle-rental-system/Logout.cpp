@@ -1,4 +1,4 @@
-#include "Logout.h"
+﻿#include "Logout.h"
 
 Logout::Logout(Login* login) : login_(login) {}
 

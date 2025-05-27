@@ -1,4 +1,4 @@
-#include "Bicycle.h"
+﻿#include "Bicycle.h"
 
 Bicycle::Bicycle(const std::string& id, const std::string& name)
     : id_(id), name_(name), renter_id_("") {}

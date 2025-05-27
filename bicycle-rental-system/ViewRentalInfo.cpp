@@ -1,4 +1,4 @@
-#include "ViewRentalInfo.h"
+﻿#include "ViewRentalInfo.h"
 
 ViewRentalInfo::ViewRentalInfo(BicycleCollection* bicycle_collection)
     : bicycle_collection_(bicycle_collection) {}

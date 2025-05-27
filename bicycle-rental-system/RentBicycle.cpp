@@ -1,4 +1,4 @@
-#include "RentBicycle.h"
+﻿#include "RentBicycle.h"
 
 RentBicycle::RentBicycle(BicycleCollection* bicycle_collection)
     : bicycle_collection_(bicycle_collection) {}
