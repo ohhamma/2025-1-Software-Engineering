@@ -49,7 +49,7 @@ int main() {
   LoginUI* login_ui = new LoginUI(in_fp, out_fp, login);
   LogoutUI* logout_ui = new LogoutUI(in_fp, out_fp, logout, login);
   RegisterBicycleUI* register_bicycle_ui = new RegisterBicycleUI(in_fp, out_fp, register_bicycle);
-  RentBicycleUI* rent_bicycle_ui = new RentBicycleUI(in_fp, out_fp, login, rent_bicycle);
+  RentBicycleUI* rent_bicycle_ui = new RentBicycleUI(in_fp, out_fp, rent_bicycle, login);
   ViewRentalInfoUI* view_rental_info_ui = new ViewRentalInfoUI(in_fp, out_fp, login, view_rental_info);
   ShutDownUI* shut_down_ui = new ShutDownUI(in_fp, out_fp, shut_down);
 

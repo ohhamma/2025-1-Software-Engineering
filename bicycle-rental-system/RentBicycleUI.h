@@ -7,7 +7,7 @@
 class RentBicycleUI {
  public:
   RentBicycleUI(std::ifstream& in_fp, std::ofstream& out_fp,
-                Login* login, RentBicycle* rent_bicycle);
+                RentBicycle* rent_bicycle, Login* login);
 
   void rentBicycle();
 
