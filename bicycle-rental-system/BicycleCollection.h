@@ -10,7 +10,7 @@ class BicycleCollection {
   ~BicycleCollection();  // 동적 메모리 해제를 위한 소멸자
 
   void addBicycle(const std::string& id, const std::string& name);
-  void rentBicycleById(const std::string& id, const std::string& renter_id);
+  Bicycle* findBicycleById(const std::string& id) const;
   std::vector<Bicycle*> findBicyclesByRenterId(const std::string& renter_id);
 
  private:

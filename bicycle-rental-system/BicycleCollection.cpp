@@ -15,14 +15,13 @@ void BicycleCollection::addBicycle(const std::string& id,
   }
 }
 
-void BicycleCollection::rentBicycleById(const std::string& id,
-                                        const std::string& renter_id) {
+Bicycle* BicycleCollection::findBicycleById(const std::string& id) const {
   for (int i = 0; i < num_bicycles_; ++i) {
     if (bicycles_[i]->getId() == id) {
-      bicycles_[i]->setRenterId(renter_id);
-      break;
+      return bicycles_[i];
     }
   }
+  return nullptr;
 }
 
 std::vector<Bicycle*> BicycleCollection::findBicyclesByRenterId(
